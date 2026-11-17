@@ -31,4 +31,4 @@ The user selected local checks until a second PDI is supplied and requested keep
 
 The installed-wheel rehearsal used the existing temporary Python environment for third-party dependencies; it is not proof of installation on a completely fresh operating system. Advanced policy semantics such as delegation, amount limits and multiple approval stages remain unsupported and visible in the dashboard.
 
-The Render/Docker deployment configuration is prepared but has not been published. No public URL, custom domain, DNS change or live HTTPS test has been performed.
+The Render/Docker build is live at https://genesis-workflow-demo.onrender.com/. Hosted checks passed the two workflow paths, corrected rejection, visitor isolation, route restrictions and security headers described in PUBLIC_DEMO.md. No custom domain or DNS change has been performed.

@@ -22,7 +22,9 @@ Open the [dashboard](http://127.0.0.1:8000/) or [API explorer](http://127.0.0.1:
 
 ## Public portfolio demo
 
-The internet-facing package is deliberately narrower than the local API. It accepts only the bundled synthetic actors and workflow, isolates temporary visitor data, disables external AI and ServiceNow connections, requires HTTPS, and limits bodies, solver depth/time, concurrency, sessions, writes and storage. Use `genesis.public:public_app` (via `python -m genesis.serve`), never the unauthenticated local entry point. A Docker image and Render Blueprint are included; see the [public deployment guide](docs/PUBLIC_DEMO.md). They are prepared and locally tested, but no public deployment or domain is claimed.
+**Live demo:** https://genesis-workflow-demo.onrender.com/
+
+The internet-facing package is deliberately narrower than the local API. It accepts only the bundled synthetic actors and workflow, isolates temporary visitor data, disables external AI and ServiceNow connections, requires HTTPS, and limits bodies, solver depth/time, concurrency, sessions, writes and storage. Use `genesis.public:public_app` (via `python -m genesis.serve`), never the unauthenticated local entry point. A Docker image and Render Blueprint are included; see the [public deployment guide](docs/PUBLIC_DEMO.md). The free Render service can sleep after inactivity, so its first response may be delayed.
 
 The demo produces:
 

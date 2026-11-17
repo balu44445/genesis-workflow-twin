@@ -14,4 +14,8 @@ GENESIS_PUBLIC_REQUIRE_HTTPS=false GENESIS_SESSION_SECRET=<private-random-value>
 
 For Render, connect the repository and create a Blueprint from `render.yaml`. Render generates the cookie-signing secret and its `onrender.com` hostname automatically. Add a custom domain later in Render and include it in `GENESIS_PUBLIC_HOST`; Render provisions and renews TLS and redirects HTTP to HTTPS. The container trusts forwarded headers from all direct peers only because Render's service port is not directly internet-accessible; change `GENESIS_FORWARDED_ALLOW_IPS` if using a different proxy topology.
 
-No domain purchase or external publication has occurred. Before announcing a URL, validate the deployed HTTPS page, isolation between two fresh browser sessions, rejected self-approval, the Alice→Bob→Carol path, security headers, and rate-limit behavior. The older 0.2 archive predates this public package and must not be presented as the deployable build.
+## Live deployment
+
+The public demo is deployed at https://genesis-workflow-demo.onrender.com/ from the public repository https://github.com/balu44445/genesis-workflow-twin. On November 17, 2026, the hosted release passed the vulnerable two-step counterexample, corrected self-approval rejection with unchanged pending state, Alice→Bob→Carol fulfillment, and isolation between separate browser cookie stores. Live HTTPS checks returned HSTS, strict CSP, framing denial, no-referrer, restricted browser permissions, opener isolation, no-store and nosniff headers; `/docs` and `/openapi.json` returned 404. External AI and ServiceNow writes remain disabled.
+
+No custom domain has been purchased or configured. The free Render service can sleep after inactivity. This is a portfolio demonstration, not a high-traffic or production ServiceNow control plane.
