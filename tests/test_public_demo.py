@@ -54,3 +54,5 @@ def test_public_rejects_before_allocating_and_requires_https(tmp_path, monkeypat
     response = secure.get('/')
     assert response.status_code == 200
     assert '; Secure' in response.headers['set-cookie']
+    assert response.headers['strict-transport-security'] == 'max-age=31536000; includeSubDomains'
+    assert response.headers['permissions-policy'] == 'camera=(), geolocation=(), microphone=()'
