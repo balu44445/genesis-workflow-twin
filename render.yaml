@@ -1,0 +1,18 @@
+services:
+  - type: web
+    name: genesis-workflow-demo
+    runtime: docker
+    plan: free
+    healthCheckPath: /health
+    autoDeployTrigger: commit
+    envVars:
+      - key: GENESIS_SESSION_SECRET
+        generateValue: true
+      - key: GENESIS_PUBLIC_MODE
+        value: "true"
+      - key: GENESIS_PUBLIC_REQUIRE_HTTPS
+        value: "true"
+      - key: GENESIS_PUBLIC_DATA
+        value: /tmp/genesis-public
+      - key: GENESIS_FORWARDED_ALLOW_IPS
+        value: "*"

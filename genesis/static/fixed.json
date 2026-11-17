@@ -1,0 +1,15 @@
+{
+  "schema_version": "1",
+  "semantics": "genesis-sequential-approval/v1",
+  "workflow_id": "genesis-access-request",
+  "revision": "demo-fixed-1",
+  "source": {"kind": "fixture", "description": "Synthetic fixture, not a live ServiceNow export"},
+  "steps": ["submit", "approve", "fulfill"],
+  "actors": [
+    {"id": "alice", "name": "Alice", "roles": ["requester", "approver"]},
+    {"id": "bob", "name": "Bob", "roles": ["approver"]},
+    {"id": "carol", "name": "Carol", "roles": ["fulfiller"]}
+  ],
+  "policy": {"require_distinct_approver": true},
+  "unsupported_features": []
+}
